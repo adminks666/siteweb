@@ -1,0 +1,8 @@
+var site_tree_node = {
+  "url": "https://www.siteweb.cn/",
+  "incount": "1",
+  "outcount": "0",
+  "title": "互联网网站...",
+  "childs": [
+    ]
+}
