@@ -1,304 +1,884 @@
-* { box-sizing: border-box; }
-ul, ol, dl, table, th, tr, td, input, textarea, li, a, div, span, em, i { margin: 0px; padding: 0px; border: 0px; }
-img { margin: 0px; padding: 0px; border: 0px; }
-li { list-style: none; }
-html, body { width: 100%; margin: 0px auto; }
-.clear { clear: both; height: 0px; line-height: 0px; font-size: 0px; overflow: hidden; display: block; }
-.clearfix::after { content: ""; display: block; height: 0px; clear: both; visibility: hidden; font-size: 0px; }
-:focus { outline: 0px; }
-a, button, input[type="button"], input[type="submit"], input[type="reset"] { cursor: pointer; }
-* html .clearfix { height: 0%; }
-* + html .clearfix { min-height: 0%; }
-* + html .clearfix { min-height: 0%; }
-.w100 { width: 100%; }
-.fl { float: left; }
-.fr { float: right; }
-body { color: rgb(255, 255, 255); background: rgb(22, 22, 22); font: 16px / 30px "Microsoft YaHei", arial, sans-serif; cursor: url("../images/icon_mouse.svg"), auto; }
-a { color: rgb(0, 0, 0); text-decoration: none; }
-a:hover { color: rgb(230, 159, 11); cursor: url("../images/icon_mouse2.svg"), auto; }
-a { color: rgb(0, 0, 0); text-decoration: none; }
-a:hover { color: rgb(230, 159, 11); }
-.di_in { display: inline-block; }
-.di_bl { display: block; }
-.v_middle { vertical-align: middle; }
-.te_c { text-align: center; }
-.p_r { position: relative; }
-.bgfff { background: rgb(255, 255, 255); }
-.flex { display: flex; }
-.flex-v { -webkit-box-orient: vertical; flex-direction: column; }
-.flex-1 { -webkit-box-flex: 1; flex: 1 1 0%; }
-.flex-align-center { -webkit-box-align: center; align-items: center; }
-.flex-pack-center { -webkit-box-pack: center; justify-content: center; }
-.flex-pack-justify { -webkit-box-pack: justify; justify-content: space-between; }
-.flex-warp { flex-flow: wrap; }
-.flex-column { flex-flow: column; }
-.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.transition { transition: all 0.5s ease 0s; }
-.img_hover { transition: all 0.3s ease 0s; }
-.img_hover:hover { transform: scale(1.05, 1.05); }
-.container { width: 100%; height: 100vh; color: rgb(255, 255, 255); }
-.header { padding: 45px 140px; border-bottom: 1px dashed rgb(38, 38, 38); }
-.header .user-info .portrait { width: 45px; height: 45px; border: 2px solid rgb(255, 255, 255); overflow: hidden; border-radius: 50%; margin-right: 15px; }
-.header .user-info .portrait img { width: 100%; }
-.header .user-info .name { text-transform: uppercase; font-size: 26px; }
-.header .link { height: 44px; line-height: 44px; font-size: 21px; }
-.header .link li { width: 125px; border-radius: 22px; z-index: 2; }
-.header .link li a { color: rgb(194, 194, 194); width: 100%; }
-.header .link li.cur { }
-.header .link li.cur a { color: rgb(0, 0, 0); }
-.header .link a.cur { background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); }
-.move-bg { position: absolute; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); left: 0px; width: 125px; border-radius: 22px; height: 44px; display: none; top: 0px; z-index: 1; }
-.warp { padding: 45px 140px; }
-.warp .txt { font-size: 20px; line-height: 1.5; margin-top: 45px; }
-.warp ul { margin-top: 20px; padding-bottom: 50px; }
-.warp li { border-radius: 10px; background: rgb(32, 32, 32); border: 1px solid rgb(40, 41, 42); width: calc(18%); height: 180px; margin-right: 2%; margin-top: 40px; padding: 30px 40px; overflow: hidden; border-bottom: 3px solid #2c5ffa;border-color: rgb(44, 95, 250) rgb(44, 95, 250) rgb(44, 95, 250) rgb(44, 95, 250);}
-.warp li .icon { width: 54px; height: 54px; border: 1px solid rgb(40, 41, 42); }
-.warp li .icon img {width: 255px;height: 152px;border-radius: 5px;/* border-color: rgb(44, 95, 250) rgb(44, 95, 250) rgb(44, 95, 250) rgb(44, 95, 250); */}
-.warp li h3 { margin-bottom: 0px; font-weight: normal; font-size: 20px; color: rgb(255, 255, 255); line-height: 1.5; margin-top: 10px; }
-.warp li h3 a { color: rgb(255, 255, 255); }
-.warp li p {margin: 59px;font-size: 14px;color: rgb(255 255 255);}
-.warp li:hover { margin-top: 10px; }
-.c1 { color: rgb(48, 199, 140); }
-.c2 { color: rgb(237, 137, 73); }
-.content { padding: 45px 140px; height: calc(100vh - 136px); color: rgb(255, 255, 255); }
-.content .en_box { position: absolute; left: 0px; top: 0px; height: 100%; border-right: 1px dashed rgb(38, 38, 38); width: 22%; }
-.content .en { font-size: 112px; line-height: 1; text-transform: uppercase; transform: rotate(90deg); margin-bottom: 10vh; }
-.content .en span { color: rgb(93, 36, 228); margin: 0px 15px; }
-.content .r_content { position: absolute; right: 0px; top: 0px; height: 100%; width: 78%; }
-.content .r_content .con { height: 26vh; }
-.content .r_content .con::after { content: ""; position: absolute; left: -1vw; border-bottom: 1px dashed rgb(38, 38, 38); right: 0px; height: 1px; bottom: 0px; }
-.content .r_content .name { font-size: 158px; width: 30vw; }
-.content .r_content .name .tips { font-size: 19px; position: absolute; left: 4px; right: 4px; bottom: -5px; z-index: 1; opacity: 0; }
-.content .r_content .name:hover .tips { opacity: 1; bottom: 5px; }
-.content .r_content .name .tips::after { content: ""; position: absolute; left: 0px; height: 70%; width: 1px; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .name .tips::before { content: ""; position: absolute; right: 0px; height: 70%; width: 1px; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .name .tips span::after { content: ""; position: absolute; left: -12.4vw; height: 1px; width: 10.2vw; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .name .tips span::before { content: ""; position: absolute; right: -12.4vw; height: 1px; width: 10.2vw; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .iphone { border-left: 1px dashed rgb(38, 38, 38); width: 15vw; }
-.content .r_content .iphone img { max-width: 90%; }
-.content .r_content .web { border-left: 1px dashed rgb(38, 38, 38); width: 15.1vw; }
-.content .r_content .web img { max-width: 90%; }
-.content .r_content .vr { border-left: 1px dashed rgb(38, 38, 38); width: 17vw; }
-.content .r_content .vr img { max-width: 90%; }
-.content .r_content .con1 { height: 35vh; }
-.content .r_content .con1::after { content: ""; position: absolute; left: -1vw; border-bottom: 1px dashed rgb(38, 38, 38); right: 0px; height: 1px; bottom: 0px; }
-.content .r_content .con1 .txt_box { width: 30vw; }
-.content .r_content .con1 .txt_box::after { content: ""; position: absolute; right: 0px; top: 0px; bottom: -2vh; width: 1px; border-right: 1px dashed rgb(38, 38, 38); }
-.content .r_content .con1 .txt_box .txt_con { width: 100%; height: 16.5vh; }
-.content .r_content .con1 .txt_box .txt_con::after { content: ""; position: absolute; left: -1vw; border-bottom: 1px dashed rgb(38, 38, 38); right: 0px; height: 1px; bottom: 0px; }
-.content .r_content .con1 .pic { width: 15vw; overflow: hidden; }
-.content .r_content .con1 .pic img { height: 100%; width: 100%; }
-.content .r_content .con1 .ui { font-size: 64px; border-right: 1px dashed rgb(38, 38, 38); }
-.content .r_content .con1 .ui .tips { color: rgb(93, 36, 228); font-size: 18px; position: absolute; right: -15px; bottom: 0px; z-index: 1; opacity: 0; top: 0px; width: 30px; }
-.content .r_content .con1 .ui:hover .tips { opacity: 1; right: 5px; }
-.content .r_content .con1 .ui .tips span { transform: rotate(90deg); position: absolute; }
-.content .r_content .con1 .ui .tips::after { content: ""; position: absolute; left: 50%; height: 1px; width: 60%; background-color: rgb(255, 255, 255); transform: translateX(-50%); top: 0px; }
-.content .r_content .con1 .ui .tips::before { content: ""; position: absolute; left: 50%; height: 1px; width: 60%; background-color: rgb(255, 255, 255); transform: translateX(-50%); bottom: 0px; }
-.content .r_content .con1 .ui .tips span::after { content: ""; position: absolute; left: -2.2vw; height: 1px; width: 2vw; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .con1 .ui .tips span::before { content: ""; position: absolute; right: -2.2vw; height: 1px; width: 2vw; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .con1 .wx { width: 11vw; }
-.content .r_content .con1 .wx img { width: 4vw; }
-.content .r_content .con1 .wx .tips { font-size: 18px; position: absolute; left: 4px; right: 4px; bottom: -10px; z-index: 1; opacity: 0; }
-.content .r_content .con1 .wx:hover .tips { opacity: 1; bottom: 5px; }
-.content .r_content .con1 .wx .tips::after { content: ""; position: absolute; left: 0px; height: 60%; width: 1px; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .con1 .wx .tips::before { content: ""; position: absolute; right: 0px; height: 60%; width: 1px; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .con1 .wx .tips span::after { content: ""; position: absolute; left: -3.8vw; height: 1px; width: 3vw; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .con1 .wx .tips span::before { content: ""; position: absolute; right: -3.8vw; height: 1px; width: 3vw; background-color: rgb(255, 255, 255); transform: translateY(-50%); top: 50%; }
-.content .r_content .con1 .text { line-height: 1.5; font-size: 20px; padding: 3vh 3vw; }
-.content .r_content .con1 .text span { padding-top: 0.8vh; }
-.content .r_content .con1 .text::after { content: ""; position: absolute; inset: 2.8vh 1.2vw 2vh; border-top: 1px dashed rgb(255, 152, 80); border-bottom: 1px dashed rgb(255, 152, 80); opacity: 0; transition: all 0.5s ease 0s; }
-.content .r_content .con1 .text::before { content: ""; position: absolute; inset: 1.3vh 2vw 0.5vh; border-left: 1px dashed rgb(255, 152, 80); border-right: 1px dashed rgb(255, 152, 80); opacity: 0; transition: all 0.5s ease 0s; }
-.content .r_content .con1 .text:hover::after, .content .r_content .con1 .text:hover::before { opacity: 1; transition: all 0.5s ease 0s; }
-.content .r_content .con1 .focus { width: 15vw; line-height: 1.5; padding: 1.6vh 0px 0px 1.5vw; font-size: 18px; }
-.content .r_content .con1 .focus::after { content: ""; position: absolute; left: 0px; top: 0px; bottom: -2vh; width: 1px; border-right: 1px dashed rgb(38, 38, 38); }
-.content .r_content .con1 .focus .txt { display: none; }
-.content .r_content .con1 .works { width: 15vw; padding: 1.6vh 2vw 0px; }
-.content .r_content .con1 .works::after { content: ""; position: absolute; left: 0px; top: 0px; bottom: -2vh; width: 1px; border-right: 1px dashed rgb(38, 38, 38); }
-.content .r_content .con1 .works .txt { font-size: 18px; line-height: 1.5; text-align: justify; }
-.content .r_content .con1 .works a { color: rgb(255, 255, 255); }
-.content .r_content .con1 .works .submit { height: 44px; line-height: 44px; background-color: rgb(93, 36, 228); color: rgb(255, 255, 255); font-size: 24px; margin-top: 2vh; }
-.content .r_content .con1 .works .submit:hover { background-color: rgb(48, 199, 140); }
-.content .r_content .con1 .works .submit .down { display: none; }
-.content .r_content .con1 .works .submit.is-rotate .down { display: block; }
-.content .r_content .con1 .works .submit.is-rotate .my { display: none; }
-.content .r_content .con1 .works .lock { margin-top: 10px; opacity: 0; }
-.content .r_content .con1 .works .lock.on { opacity: 1; }
-.error { color: rgb(255, 75, 75); position: absolute; left: 2.5vw; top: 0px; line-height: 40px; display: none; }
-.content .r_content .tool_content { padding: 2vh 2vw; height: 18vh; }
-.content .r_content .tool_content::after { content: ""; position: absolute; left: -1vw; border-bottom: 1px dashed rgb(38, 38, 38); right: 0px; height: 1px; bottom: 0px; }
-.content .r_content .tool_content .text { position: absolute; right: 4vw; bottom: 10px; text-align: right; font-size: 20px; }
-.content .r_content .tool_content .text p { margin: 0px; font-size: 18px; }
-.content .r_content .tool_content .sns .wx .erwma { width: 64px; height: 64px; position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); opacity: 0; }
-.content .r_content .tool_content .sns .wx .erwma img { width: 100%; }
-.content .r_content .tool_content .sns .wx:hover .erwma { opacity: 1; bottom: 34px; }
-.content .r_content .tool_content .sns .figma { background: url("../images/icon_figma.svg") center center / 100% no-repeat; margin-left: 2vw; }
-.content .r_content .tool_content .sns .figma:hover { background: url("../images/icon_figma_hover.svg") center center no-repeat; }
-.content .r_content .con1 .works .lock input { background: url("../images/lock.svg") 0.8vw center / 22px no-repeat rgb(33, 33, 33); padding-left: 2.5vw; width: 100%; height: 40px; color: rgb(255, 255, 255); }
-.content .r_content .tool_content .sns .mail span { width: 100%; height: 24px; }
-.content .r_content .tool_content .sns .mail .copytxt { opacity: 0; position: absolute; left: 50%; transform: translateX(-50%); background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); border-radius: 5px; padding: 2px 0px; bottom: 30px; width: 60px; font-size: 14px; }
-.content .r_content .tool_content .sns .mail input { opacity: 0; width: 5px; height: 5px; position: absolute; left: 0px; z-index: 0; top: 0px; }
-.flex-center { width: 100%; display: flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; }
-.icon-3d { padding: 10px; animation: 200ms ease 0s 10 normal none running icon3d; color: rgb(177, 177, 177); }
-.icon-3d:hover { animation: 200ms ease 0s infinite normal none running icon3d; }
-.fa-siz { font-size: 2em; margin-left: 1vw; }
-@keyframes icon3d { 
-  0% { text-shadow: rgb(10, 41, 192) 5px 4px, rgb(229, 4, 4) -5px -6px; }
-  25% { text-shadow: rgb(10, 41, 192) -5px -6px, rgb(229, 4, 4) 5px 4px; }
-  50% { text-shadow: rgb(10, 41, 192) 5px -4px, rgb(229, 4, 4) -8px 4px; }
-  75% { text-shadow: rgb(10, 41, 192) -8px -4px, rgb(229, 4, 4) -5px -4px; }
-  100% { text-shadow: rgb(10, 41, 192) -5px 0px, rgb(229, 4, 4) 5px -4px; }
+<html lang="zh-CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>主页 | 御网尚书</title>
+<meta name="keywords" content="御网尚书,网络安全,信息安全,知识科普,心理学,安全攻防,系统安全,数据安全">
+<meta name="description" content="这里是御网尚书的主页">  
+<!--页面核心样式-->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--页面核心JS-->
+<script type="text/javascript" src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/js/uaredirect.js"></script>
+<script type="text/javascript">browserRedirect("m/index.html");</script>
+<script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/js/respond.min.js"></script>
+<script type="text/javascript" src="/js/diy.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto_text')
+      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      hitokoto.innerText = data.hitokoto
+    })
+    .catch(console.error)
+</script>
+</head>
+<body>
+<div class="container slideTxtBox">
+    <div class="header flex flex-pack-justify flex-align-center">
+    <div class="user-info flex flex-align-center">
+        <div class="portrait"><img src="https://www.hack-gov.cn/favicon.ico" alt="LOGO"></div>
+        <div class="name PangMenZhengDao">御网尚书</div><!--左上角 Logo+站名-->
+    </div>
+    <div class="link te_c p_r hd">
+		<ul class="flex flex-align-center">
+			<li class="p_r"><a href="javascript:void(0);" class="transition OPPOSans-R di_bl">关于尚书</a></li>
+			<li class="p_r"><a href="javascript:void(0);" class="transition OPPOSans-R di_bl">个人项目</a></li>
+		</ul>
+		<div class="move-bg"></div><!--右上方 部件-->
+	</div>
+	</div>
+
+<!--页面内容-->	
+<div class="bd">
+<!--左侧小部件-MacBook Air-->
+<div class="content p_r">
+	<div class="en_box flex flex-align-center flex-pack-center">
+	<div class="macbook">
+  <div class="inner">
+    <div class="screen">
+      <div class="face-one">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="shade"></div>
+        </div>
+      </div>
+      <img src="https://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white.svg" alt="LOGO" class="logo">
+    </div>
+    <div class="body">
+      <div class="face-one">
+        <div class="touchpad">
+        </div>
+        <div class="keyboard">
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key space"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+          <div class="key f"></div>
+        </div>
+      </div>
+      <div class="pad one"></div>
+      <div class="pad two"></div>
+      <div class="pad three"></div>
+      <div class="pad four"></div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+</div>
+</div>
+
+<!--居中内容-->
+<div class="r_content">	
+	<div class="con p_r flex">
+	 <!--你的名字-->   
+	<div class="name flex flex-align-center flex-pack-center OPPOSans-M p_r" id="one_part">
+	Royalnet
+	<div class="tips te_c OPPOSans-B transition"><span class="p_r c1">455px</span></div>
+	</div>
+	
+	<!--小部件-GIF-->
+	<div class="flex flex-align-center flex-pack-center iphone"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/icon_APP.gif" alt="APP"></div>
+	<div class="flex flex-align-center flex-pack-center web"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/icon_WEB.gif" alt="WEB"></div>
+	<div class="flex flex-align-center flex-pack-center vr"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/icon_VR.gif" alt="VR"></div>
+	</div>
+	
+	<!--个人定位-->
+    <div class="p_r flex con1">
+	<div class="txt_box p_r">
+	<div class="txt_con p_r flex">
+	<div class="ui flex flex-align-center flex-pack-center p_r OPPOSans-M flex-1" id="two_part">
+	网安爱好者
+	<div class="tips transition te_c OPPOSans-B transition flex flex-align-center flex-pack-center">
+	<span class="p_r">127px</span>
+	</div>
+	</div>
+	
+	<!--小部件-音乐-->
+    <div class="wx flex flex-align-center flex-pack-center p_r" id="three_part">
+	<img src="images/music.png" alt="V">
+    <audio src="mp3/1.mp3" controls="controls" preload id="music1" hidden>
+    </audio>
+    <span class="holder" id="bf" onclick="bf();">Music</span>
+    <div class="tips te_c OPPOSans-B transition">
+	<span class="p_r c2">70px</span>
+	</div>
+	</div>
+	</div>
+	
+	<!--个人简介-->
+	<div class="text OPPOSans-M p_r transition" id="four_part">
+	<p id="hitokoto_text">:D 获取中...</p>
+	</div>
+	</div>
+	
+	<!--个人头像-->
+	<div class="pic flex flex-align-center flex-pack-center " id="five_part">
+	    <img src="images/v.png" alt="V">
+	</div>
+	                          <!--触发器-->
+					<div class="focus p_r OPPOSans-M">
+						<div class="txt" style="display: block;" id="default">
+							position: <span class="c1">absolute</span>;<br>
+							width: <span class="c2">0px</span>;<br>
+							height: <span class="c2">0px</span>;<br>
+							left: <span class="c2">0px</span>;<br>
+							top: <span class="c2">0px</span>;<br>
+							font-family: <span class="c1">OPPOSans</span>;<br>
+							font-style: <span class="c1">normal</span>;<br>
+							font-weight: <span class="c2">0</span>;<br>
+							font-size: <span class="c2">0px</span>;<br>
+							line-height: <span class="c2">0px</span>;
+						</div>
+						<div class="txt" id="one">
+							position: <span class="c1">absolute</span>;<br>
+							width: <span class="c2">357px</span>;<br>
+							height: <span class="c2">157px</span>;<br>
+							left: <span class="c2">336px</span>;<br>
+							top: <span class="c2">101px</span>;<br>
+							font-family: <span class="c1">OPPOSans</span>;<br>
+							font-style: <span class="c2">normal</span>;<br>
+							font-weight: <span class="c2">500</span>;<br>
+							font-size: <span class="c2">119px</span>;<br>
+							line-height: <span class="c2">157px</span>
+						</div>
+						<div class="txt" id="two">
+							position: <span class="c1">absolute</span>;<br>
+							width: <span class="c2">194px</span>;<br>
+							height: <span class="c2">63px</span>;<br>
+							left: <span class="c2">336px</span>;<br>
+							top: <span class="c2">312px</span>;<br>
+							font-family: <span class="c1">OPPOSans</span>;<br>
+							font-style: <span class="c1">normal</span>;<br>
+							font-weight: <span class="c2">500</span>;<br>
+							font-size: <span class="c2">48px</span>;<br>
+							line-height: <span class="c2">63px</span>;
+						</div>
+						<div class="txt" id="three">
+							position: <span class="c1">absolute</span>;<br>
+							width: <span class="c2">78px</span>;<br>
+							height: <span class="c2">58px</span>;<br>
+							left: <span class="c2">621px</span>;<br>
+							top: <span class="c2">315px</span>;<br>
+							Wechat: <span class="c1">Joreking8</span>;
+						</div>
+						<div class="txt" id="four">
+							position: <span class="c1">absolute</span>;<br>
+							width: <span class="c2">375px</span>;<br>
+							height: <span class="c2">75px</span>;<br>
+							left: <span class="c2">336px</span>;<br>
+							top: <span class="c2">439px</span>;<br>
+							font-family: <span class="c1">OPPOSans</span>;<br>
+							font-style: <span class="c2">normal</span>;<br>
+							font-weight: <span class="c2">500</span>;<br>
+							font-size: <span class="c2">16px</span>;<br>
+							line-height: <span class="c2">149.1%</span>;
+						</div>
+<!--头像触发器-->						
+<div class="txt" id="five">
+	<br>
+	喜欢妮妮~
+	<br>
+	<br>
+	╭∞━━━╮.oO◎
+	<br>
+	┃  ┃
+	<br>
+	┃● ●┃
+	<br>
+	┃﹋  ε  ﹋ ┃
+	<br>
+	○━━━━╯
+</div>
+</div>
+
+<!--右侧内容-->
+<div class="works p_r OPPOSans-M">
+<div class="txt">
+具备Windows、Linux开关机操作，翻墙学习日外语言能力、白嫖熟练度100%，有较强的前端剽窃经验。
+</div>
+<div class="lock transition p_r">
+<input type="text" id="code" value="" placeholder="请输入提取码" class="OPPOSans-M"/>
+<div class="error" id="code_error">提取码错误</div>
+</div>
+<div class="submit" id="btn">
+<a href="javascript:void(0);" class="di_bl te_c my">秘密入口</a>
+<a href="http://baidu.com" id="down" class="di_bl te_c down">下载</a>
+</div>
+</div>
+</div>
+
+<!--下方内容-->
+<div class="p_r tool_content flex flex-align-center">
+<div class="sns flex ">
+<div class="flex-center">
+<!--小部件-微信-->
+<i class="fa fa-weixin fa-siz icon-3d wx p_r transition">
+    <div class="erwma transition"><img src="/">微信</div>
+</i>
+<!--小部件-邮箱-->                        
+<a href="javascript:void(0);" class="di_bl copy" data-clipboard-action="copy" data-clipboard-target="#foo" id="mail">		
+<i class="fa fa-envelope-o fa-siz icon-3d mail p_r">
+    <div class="copytxt te_c OPPOSans-M transition" id="copyed">已复制</div>
+</i></a>
+<!--小部件-其他-->
+<a href="" target="_blank"><i class="fa fa-github fa-siz icon-3d"></i></a>
+<a href="" target="_blank"><i class="fa fa-qq fa-siz icon-3d"></i></a>
+<a href="" target="_blank"><i class="fa fa-telegram fa-siz icon-3d"></i></a>
+<a href="" target="_blank"><i class="fa fa-weibo fa-siz icon-3d"></i></a>
+</div>
+</div>
+<div class="text OPPOSans-M">然后知生于忧患而死于安乐<br>
+<p>Then know born in sorrow died in peace and happiness</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--翻页内容-->		
+<div class="warp" id="content">
+<div class="txt OPPOSans-R">兴趣使然做的一些小东西</div>
+<html lang="auto" class="">
+  <head>
+    <link
+      rel="stylesheet"
+      href="css/diy.css"
+    <meta name="twitter:image:width" content="538" />
+    <meta name="twitter:image:height" content="104" />
+    <link rel="canonical" href="https://yun.thecover.cn/home" />
+    <script
+      async=""
+      src="https://dcdn.thecover.cn/cover/covercio.min.js?aid=&amp;appid=coverCloud&amp;an=&amp;at=true"
+    ></script>
+    <script src="https://zz.bdstatic.com/linksubmit/push.js"></script>
+    <script src="https://hm.baidu.com/hm.js?51d06e18e58217bcdd83e54c6818cb5a"></script>
+    <script>
+      window.routerBase = "/";
+    </script>
+    <link
+      rel="icon"
+      href="https://dcdn.thecover.cn/cover-cloud/static/favicon.b6262227.png"
+      type="image/x-icon"
+      data-react-helmet="true"
+    />
+    <meta
+      name="twitter:image"
+      content="https://dcdn.thecover.cn/yun/%E5%B0%81%E9%9D%A2%E4%BA%91%402x%20%281%29.png"
+      data-react-helmet="true"
+    />
+    <meta name="twitter:image:width" content="538" data-react-helmet="true" />
+    <meta name="twitter:image:height" content="104" data-react-helmet="true" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      charset="UTF-8"
+      href="https://translate.googleapis.com/translate_static/css/translateelement.css"
+    />
+  </head>
+  <body>
+    <noscript>Out-of-the-box mid-stage front/design solution!</noscript>
+<div id="root" class="">
+      <section class="antd-pro-layouts-cloud-layout-CloudLayout ant-layout">
+        <section class="ant-layout">
+          <main class="ant-layout-content">
+            <div>
+              <div class="antd-pro-pages-home-components-assistance-section-index-AssistanceSection">
+                <div class="antd-pro-components-section-title-index-SectionTitle">
+                  <div class="antd-pro-components-section-title-index-titleCls">
+                    个人网站
+                  </div>
+                  <div class="antd-pro-components-section-title-index-titleLineWrapper antd-pro-components-section-title-index-pageLine">
+                    <div class="antd-pro-components-section-title-index-titleLine"></div>
+                  </div>
+                  <div class="antd-pro-components-section-title-index-description">
+                    <div></div>
+                  </div>
+                </div>
+                <div class="antd-pro-pages-home-components-assistance-section-index-assistanceWrapper">
+                  <div class="antd-pro-pages-home-components-assistance-section-index-contentWrapper">
+                    <div class="antd-pro-pages-home-components-assistance-section-index-row antd-pro-pages-home-components-assistance-section-index-top">
+                      <div class="antd-pro-pages-home-components-assistance-section-index-leftTopWrapper">
+                        <div class="antd-pro-pages-home-components-assistance-section-content-card-ContentCard">
+                          <div class="antd-pro-pages-home-components-assistance-section-content-card-cardWrapper">
+                            <div class="antd-pro-pages-home-components-assistance-section-content-card-content">
+                              <div id="ContentCard">
+                                <div class="antd-pro-pages-home-components-assistance-section-content-card-contentCls">
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-iconImg">
+                                  <a href="https://www.hack-gov.cn/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/blog.jpg" alt="御网尚书的博客" style="height: 170px;width: 326px;">
+        </a>
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-title" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                    『御网尚书的博客』
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-description" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="antd-pro-pages-home-components-assistance-section-index-lineWrapper" style="margin: 50px 0px -160px -70px">
+                          <img src="data:image/png;base64,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" alt="">
+                        </div>
+                      </div>
+                      <div class="antd-pro-pages-home-components-assistance-section-index-rightTopWrapper">
+                        <div class="antd-pro-pages-home-components-assistance-section-index-lineWrapper" style="margin: 50px -70px -160px 0px">
+                          <img src="data:image/png;base64,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" alt="">
+                        </div>
+                        <div class="antd-pro-pages-home-components-assistance-section-content-card-ContentCard">
+                          <div class="antd-pro-pages-home-components-assistance-section-content-card-cardWrapper">
+                            <div class="antd-pro-pages-home-components-assistance-section-content-card-content">
+                              <div id="ContentCard">
+                                <div class="antd-pro-pages-home-components-assistance-section-content-card-contentCls">
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-iconImg">
+                                  <a href="https://www.butterfly1.cn/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/buff.jpg" alt="御网尚书的主题致敬" style="height: 170px;width: 326px;">
+        </a>
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-title" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                    『御网尚书的主题致敬』
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-description" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="antd-pro-pages-home-components-assistance-section-index-coverImg">
+                        <img src="images/1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="antd-pro-pages-home-components-assistance-section-index-row antd-pro-pages-home-components-assistance-section-index-bottom">
+                      <div class="antd-pro-pages-home-components-assistance-section-index-leftBottomWrapper">
+                        <div class="antd-pro-pages-home-components-assistance-section-content-card-ContentCard">
+                          <div class="antd-pro-pages-home-components-assistance-section-content-card-cardWrapper">
+                            <div class="antd-pro-pages-home-components-assistance-section-content-card-content">
+                              <div id="ContentCard">
+                                <div class="antd-pro-pages-home-components-assistance-section-content-card-contentCls">
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-iconImg">
+                                  <a href="https://www.hack-gov.cn/Cyberthreats/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/yuqing.jpg" alt="御网尚书的御网舆情" style="height: 170px;width: 326px;">
+        </a>
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-title" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                    『御网尚书的御网舆情』
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-description" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="antd-pro-pages-home-components-assistance-section-index-lineWrapper" style="margin: -230px 0px 0px -70px">
+                          <img src="data:image/png;base64,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" alt="">
+                        </div>
+                      </div>
+                      <div class="antd-pro-pages-home-components-assistance-section-index-rightBottomWrapper">
+                        <div class="antd-pro-pages-home-components-assistance-section-index-lineWrapper" style="margin: -230px -70px 0px 0px">
+                          <img src="data:image/png;base64,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" alt="">
+                        </div>
+                        <div class="antd-pro-pages-home-components-assistance-section-content-card-ContentCard">
+                          <div class="antd-pro-pages-home-components-assistance-section-content-card-cardWrapper">
+                            <div class="antd-pro-pages-home-components-assistance-section-content-card-content">
+                              <div id="ContentCard">
+                                <div class="antd-pro-pages-home-components-assistance-section-content-card-contentCls">
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-iconImg">
+                                  <a href="https://www.hack-gov.cn/security/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/images/daohang.jpg" alt="御网尚书的安全导航" style="height: 170px;width: 326px;">
+        </a>
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-title" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                    『御网尚书的安全导航』
+                                  </div>
+                                  <div class="antd-pro-pages-home-components-assistance-section-content-card-description" style="
+                                      opacity: 1;
+                                      transform: translate(0px, 0px);
+                                    ">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              <div class="antd-pro-components-section-title-index-SectionTitle">
+                  <div class="antd-pro-components-section-title-index-titleCls">
+友情链接                  </div>
+                  <div class="antd-pro-components-section-title-index-titleLineWrapper antd-pro-components-section-title-index-pageLine">
+                    <div class="antd-pro-components-section-title-index-titleLine"></div>
+                  </div>
+                  <div class="antd-pro-components-section-title-index-description">
+                    <div></div>
+                  </div>
+                </div><ul class="flex flex-warp">
+<li class="transition" style="visibility: visible;animation-delay: 0ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://tzy1997.com" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/tzy1997.png" alt="Ethan.Tzy">
+        </a></div><a href="https://tzy1997.com" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://tzy1997.com" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">Ethan.Tzy的博客</p>
+            <div class="site-card-avatar" style="/* height: 2px; */"><a href="https://bu.dusays.com/2022/01/14/cd5ffd485f867.jpg" data-fancybox="images" data-caption="Ethan.Tzy的博客" class="fancybox" data-srcset="https://bu.dusays.com/2022/01/14/cd5ffd485f867.jpg" style="display: flex;flex-direction: row;"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://bu.dusays.com/2022/01/14/cd5ffd485f867.jpg" onerror="this.onerror=null,this.src=&quot;https://bu.dusays.com/2022/01/14/cd5ffd485f867.jpg&quot;" alt="Ethan.Tzy的博客" data-ll-status="loaded" src="https://bu.dusays.com/2022/01/14/cd5ffd485f867.jpg" style="width: 35px;padding: 0;height: 35px;"><span class="desc" title="2022年的理想开始实现了吗？" style="padding: 0 0 0 15px; color: #ffff;">2022年的理想开始实现了吗？</span></a></div>
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 300ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://www.easyf12.top/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/easyf12.jpg" alt="一蓑烟雨的博客">
+        </a></div><a href="https://www.easyf12.top/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://www.easyf12.top/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">一蓑烟雨的博客</p>
+            <div class="site-card-avatar"><a href="https://s1.ax1x.com/2022/03/21/quECAH.jpg" data-fancybox="images" data-caption="一蓑烟雨的博客" class="fancybox" data-srcset="https://s1.ax1x.com/2022/03/21/quECAH.jpg" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://s1.ax1x.com/2022/03/21/quECAH.jpg" onerror="this.onerror=null,this.src=&quot;https://s1.ax1x.com/2022/03/21/quECAH.jpg&quot;" alt="一蓑烟雨的博客" data-ll-status="loaded" src="https://s1.ax1x.com/2022/03/21/quECAH.jpg" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。" style="padding: 0 0 0 15px; color: #ffff;">竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。</span></a></div> 			
+<li class="transition" style="visibility: visible;animation-delay: 600ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://www.nesxc.com" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/nescx.jpg" alt="小N同学">
+        </a></div><a href="https://www.nesxc.com" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://www.nesxc.com" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">小N同学</p>
+            <div class="site-card-avatar"><a href="https://img.cdn.nesxc.com/upload/wordpress/1ed9fc7d9679-150x150.jpg" data-fancybox="images" data-caption="小N同学" class="fancybox" data-srcset="https://img.cdn.nesxc.com/upload/wordpress/1ed9fc7d9679-150x150.jpg" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://img.cdn.nesxc.com/upload/wordpress/1ed9fc7d9679-150x150.jpg" onerror="this.onerror=null,this.src=&quot;https://img.cdn.nesxc.com/upload/wordpress/1ed9fc7d9679-150x150.jpg&quot;" alt="小N同学" data-ll-status="loaded" src="https://img.cdn.nesxc.com/upload/wordpress/1ed9fc7d9679-150x150.jpg" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="青石落晚巷 故人未还乡" style="padding: 0 0 0 15px; color: #ffff;">青石落晚巷 故人未还乡。</span></a></div>			
+<li class="transition" style="visibility: visible;animation-delay: 900ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://xiaocaibi.top/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/hacker.png" alt="林先生">
+        </a></div><a href="https://xiaocaibi.top/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://xiaocaibi.top/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">林先生</p>
+            <div class="site-card-avatar"><a href="https://xiaocaibi.top/img/favicon.png" data-fancybox="images" data-caption="林先生" class="fancybox" data-srcset="https://xiaocaibi.top/img/favicon.png" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://xiaocaibi.top/img/favicon.png" onerror="this.onerror=null,this.src=&quot;https://xiaocaibi.top/img/favicon.png&quot;" alt="林先生" data-ll-status="loaded" src="https://xiaocaibi.top/img/favicon.png" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="本科 | 计算机科学与技术 | 网络安全" style="padding: 0 0 0 15px; color: #ffff;">本科 | 计算机科学与技术 | 网络安全</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 1200ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://akilar.top" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/akilar.top.jpg" alt="Akilar糖果屋">
+        </a></div><a href="https://akilar.top" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://akilar.top" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">Akilar糖果屋</p>
+             <div class="site-card-avatar"><a href="https://npm.elemecdn.com/akilar-candyassets/image/author3.webp" data-fancybox="images" data-caption="Akilar糖果屋" class="fancybox" data-srcset="https://npm.elemecdn.com/akilar-candyassets/image/author3.webp" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://npm.elemecdn.com/akilar-candyassets/image/author3.webp" onerror="this.onerror=null,this.src=&quot;https://npm.elemecdn.com/akilar-candyassets/image/author3.webp&quot;" alt="Akilar糖果屋" data-ll-status="loaded" src="https://npm.elemecdn.com/akilar-candyassets/image/author3.webp" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="欢迎进入糖果屋" style="padding: 0 0 0 15px; color: #ffff;">欢迎进入糖果屋</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 0ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://zfe.space/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/zfe.one.jpg" alt="小冰博客">
+        </a></div><a href="https://zfe.space/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://zfe.space/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">小冰博客</p>
+            <div class="site-card-avatar"><a href="https://zfe.space/images/headimage.png" data-fancybox="images" data-caption="小冰博客" class="fancybox" data-srcset="https://zfe.space/images/headimage.png" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://npm.elemecdn.com/akilar-candyassets/image/author3.webp" onerror="this.onerror=null,this.src=&quot;https://zfe.space/images/headimage.png&quot;" alt="小冰博客" data-ll-status="loaded" src="https://zfe.space/images/headimage.png" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="做个有梦想的人" style="padding: 0 0 0 15px; color: #ffff;">做个有梦想的人</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 300ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://www.imql.life/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/www.ql-isaac.cn.jpg" alt="ql-isaac博客">
+        </a></div><a href="https://www.imql.life/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://www.imql.life/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">ql-isaac博客</p>
+            <div class="site-card-avatar"><a href="https://npm.elemecdn.com/akilar-friends@latest/avatar/blog.ql-isaac.cn.jpg" data-fancybox="images" data-caption="ql-isaac博客" class="fancybox" data-srcset="https://npm.elemecdn.com/akilar-friends@latest/avatar/blog.ql-isaac.cn.jpg" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://npm.elemecdn.com/akilar-friends@latest/avatar/blog.ql-isaac.cn.jpg" onerror="this.onerror=null,this.src=&quot;https://npm.elemecdn.com/akilar-friends@latest/avatar/blog.ql-isaac.cn.jpg&quot;" alt="ql-isaac博客" data-ll-status="loaded" src="https://npm.elemecdn.com/akilar-friends@latest/avatar/blog.ql-isaac.cn.jpg" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="学习与生活" style="padding: 0 0 0 15px; color: #ffff;">学习与生活</span></a></div>						
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 600ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://blog.zhheo.com/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/blog.zhheo.com.jpg" alt="张洪Heo">
+        </a></div><a href="https://blog.zhheo.com/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://blog.zhheo.com/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">张洪Heo</p>
+            <div class="site-card-avatar"><a href="https://blog.zhheo.com/img/avatar.png" data-fancybox="images" data-caption="张洪Heo" class="fancybox" data-srcset="https://blog.zhheo.com/img/avatar.png" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://blog.zhheo.com/img/avatar.png" onerror="this.onerror=null,this.src=&quot;https://blog.zhheo.com/img/avatar.png&quot;" alt="张洪Heo" data-ll-status="loaded" src="https://blog.zhheo.com/img/avatar.png" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="爱折腾的设计师" style="padding: 0 0 0 15px; color: #ffff;">爱折腾的设计师</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 900ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="http://new.biaoblog.run:1234" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/biaoblog.run%20%281%29.jpg" alt="biaoblog">
+        </a></div><a href="http://new.biaoblog.run:1234" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="http://new.biaoblog.run:1234" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">biaoblog</p>
+            <div class="site-card-avatar"><a href="/links/yuan.png" data-fancybox="images" data-caption="biaoblog" class="fancybox" data-srcset="/links/yuan.png" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="/links/yuan.png" onerror="this.onerror=null,this.src=&quot;/links/yuan.png&quot;" alt="biaoblog" data-ll-status="loaded" src="/links/yuan.png" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="专注web开发技术分享" style="padding: 0 0 0 15px; color: #ffff;">专注web开发技术分享</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 1200ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://qiuchao.net/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/qiuchao.net.png" alt="Mr.Chao">
+        </a></div><a href="https://qiuchao.net/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://qiuchao.net/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">Mr.Chao</p>
+            <div class="site-card-avatar"><a href="https://photo.qiuchao.net:10011/images/2020/10/20/420509_61335672_p0.md.png" data-fancybox="images" data-caption="Mr.Chao" class="fancybox" data-srcset="https://photo.qiuchao.net:10011/images/2020/10/20/420509_61335672_p0.md.png" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://photo.qiuchao.net:10011/images/2020/10/20/420509_61335672_p0.md.png" onerror="this.onerror=null,this.src=&quot;https://photo.qiuchao.net:10011/images/2020/10/20/420509_61335672_p0.md.png&quot;" alt="Mr.Chao" data-ll-status="loaded" src="https://photo.qiuchao.net:10011/images/2020/10/20/420509_61335672_p0.md.png" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="面朝大海，春暖花开" style="padding: 0 0 0 15px; color: #ffff;">面朝大海，春暖花开</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 0ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://haiyong.site/" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/haiyong.site.png" alt="haiyong">
+        </a></div><a href="https://haiyong.site/" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://haiyong.site/" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">haiyong</p>
+            <div class="site-card-avatar"><a href="https://haiyong.site/img/favicon.png" data-fancybox="images" data-caption="haiyong" class="fancybox" data-srcset="https://haiyong.site/img/favicon.png" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://haiyong.site/img/favicon.png" onerror="this.onerror=null,this.src=&quot;https://haiyong.site/img/favicon.png&quot;" alt="haiyong" data-ll-status="loaded" src="https://haiyong.site/img/favicon.png" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="手握日月摘心陈" style="padding: 0 0 0 15px; color: #ffff;">手握日月摘心陈</span></a></div>			
+    </li>
+<li class="transition" style="visibility: visible;animation-delay: 300ms;animation-name: fadeInUp;">
+        <div class="icon">
+            <a href="https://www.chuckle.top" target="_blank"><img src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/links/chuckle.top.jpg" alt="轻笑Chuckle">
+        </a></div><a href="https://www.chuckle.top" target="_blank">
+            </a><h3 class="OPPOSans-M ellipsis"><a href="https://www.chuckle.top" target="_blank"></a><a href="" target="_blank"></a></h3>
+            <p class="OPPOSans-M ellipsis">轻笑Chuckle</p>
+            <div class="site-card-avatar"><a href="https://www.chuckle.top/img/head.webp" data-fancybox="images" data-caption="haiyong" class="fancybox" data-srcset="https://www.chuckle.top/img/head.webp" style="/* display: flex; *//* flex-direction: row; *//* flex-wrap: nowrap; *//* align-content: center; *//* align-items: flex-start; */"><img class="flink-avatar cf-friends-avatar entered loaded" data-lazy-src="https://www.chuckle.top/img/head.webp" onerror="this.onerror=null,this.src=&quot;https://www.chuckle.top/img/head.webp&quot;" alt="haiyong" data-ll-status="loaded" src="https://www.chuckle.top/img/head.webp" style="width: 35px; *//* padding: 0  0 0; */"><span class="desc" title="宁静致远 倾尘轻笑" style="padding: 0 0 0 15px; color: #ffff;">宁静致远 倾尘轻笑</span></a></div>			
+    </li>    
+    </ul></div>
+            </div>
+          </main>
+        </section>
+      </section>
+    </div>
+    </script>
+    <div class="goog-te-spinner-pos">
+      <div class="goog-te-spinner-animation">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="goog-te-spinner"
+          width="96px"
+          height="96px"
+          viewBox="0 0 66 66"
+        >
+          <circle
+            class="goog-te-spinner-path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
+
+	
+<style>
+
+</style>
+<canvas id="background"></canvas>
+</div>
+</div>
+</div>
+
+<script src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/js/jquery.SuperSlide.2.1.1.js"></script>
+<script>jQuery(".slideTxtBox").slide({});</script>
+<!-- 滑动效果 -->
+<script src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/js/jquery.movebg.js"></script>
+<script>
+$(function(){
+	$(".link").movebg({width:125/*滑块的大小*/,extra:40/*额外反弹的距离*/,speed:300/*滑块移动的速度*/,rebound_speed:400/*滑块反弹的速度*/});
+})
+</script>
+<link rel="stylesheet" type="text/css" href="css/font.css"/>
+<script src="https://websitecssjs.oss-cn-beijing.aliyuncs.com/siteweb/js/clipboard.min.js"></script>
+<script>//复制
+	var clipboard = new Clipboard('.copy');
+	clipboard.on('success', function(e) {
+		console.log(e);
+	});
+	clipboard.on('error', function(e) {
+		console.log(e);
+	});
+	$('#mail').click(function(){
+		$('#copyed').css('opacity',1)
+			setTimeout(function(){
+			$('#copyed').css('opacity',0)
+		},2000)
+	})
+	$('#one_part,#two_part,#three_part,#four_part,#five_part').hover(function(){
+		var that = $(this)
+		var target = that.attr('id').replace('_part','')
+		$('.focus .txt').hide()
+		$('#'+target).show()
+	},function(){
+		$('.focus .txt').hide()
+		$('#default').show()
+	})
+	$('#code').focus(function(){
+		$('#code').attr('placeholder','请输入提取码')
+		$('#code_error').hide()
+	})
+	$('#down').click(function(){
+		var that = $(this)
+		var code = $('#code').val();
+		if(code != ''){ //提取码
+			$('#code').attr('placeholder','').val('')
+			$('#code_error').show()
+			return false;
+		}
+		that.attr('href','https://www.hack-gov.cn/')//提取码成功跳转地址
+		that.attr('target','_blank')
+	})
+</script>
+<!-- 下载 -->
+<script>
+	const btn = document.querySelector("#btn");
+	const item = document.querySelectorAll(".lock");
+	let showCard = (event) => {
+		btn.classList.toggle("is-rotate");
+		for (var i = 0; i < item.length; i++) {
+			item[i].classList.toggle(`on`);
+		}
+	}
+	btn.addEventListener("click", showCard);
+</script>
+<!--音乐-->
+<script>
+function rbf(){
+ var audio = document.getElementById('music1'); 
+ audio.currentTime = 0;
 }
-.macbook { width: 150px; height: 96px; position: absolute; left: 50%; top: 50%; margin: -75px 0px 0px -48px; perspective: 500px; }
-.shadow { position: absolute; width: 60px; height: 0px; left: 40px; top: 160px; transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 60px 40px; animation: 7s ease 0s infinite normal none running shadow; }
-.inner { z-index: 20; position: absolute; width: 150px; height: 96px; left: 0px; top: 0px; transform-style: preserve-3d; transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg); animation: 7s ease 0s infinite normal none running rotate; }
-.screen { width: 150px; height: 96px; position: absolute; left: 0px; bottom: 0px; border-radius: 7px; background: linear-gradient(45deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0) 100%) left bottom / 300px 300px rgb(221, 221, 221); transform-style: preserve-3d; transform-origin: 50% 93px; transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); animation: 7s ease 0s infinite normal none running lid-screen; box-shadow: rgba(255, 255, 255, 0.5) 0px 3px 7px inset; }
-.screen .logo { position: absolute; width: 20px; height: 24px; left: 50%; top: 50%; margin: -12px 0px 0px -10px; transform: rotateY(180deg) translateZ(0.1px); }
-.screen .face-one { width: 150px; height: 96px; position: absolute; left: 0px; bottom: 0px; border-radius: 7px; background: linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%) rgb(211, 211, 211); transform: translateZ(2px); }
-.screen .face-one .camera { width: 3px; height: 3px; border-radius: 100%; background: rgb(0, 0, 0); position: absolute; left: 50%; top: 4px; margin-left: -1.5px; }
-.screen .face-one .display { width: 130px; height: 74px; margin: 10px; background: url("") center center / 100% 100% no-repeat rgb(0, 0, 0); border-radius: 1px; position: relative; box-shadow: rgb(0, 0, 0) 0px 0px 2px inset; }
-.screen .face-one .display .shade { position: absolute; left: 0px; top: 0px; width: 130px; height: 74px; background: linear-gradient(-135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 47%, rgba(255, 255, 255, 0) 48%) 0px 0px / 300px 200px; animation: 7s ease 0s infinite normal none running screen-shade; }
-.screen .face-one span { position: absolute; top: 85px; left: 57px; font-size: 6px; color: rgb(102, 102, 102); }
-.body { width: 150px; height: 96px; position: absolute; left: 0px; bottom: 0px; border-radius: 7px; background: linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%) rgb(203, 203, 203); transform-style: preserve-3d; transform-origin: 50% bottom; transform: rotateX(-90deg); animation: 7s ease 0s infinite normal none running lid-body; }
-.body .face-one { width: 150px; height: 96px; position: absolute; left: 0px; bottom: 0px; border-radius: 7px; transform-style: preserve-3d; background: linear-gradient(30deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%) rgb(223, 223, 223); animation: 7s ease 0s infinite normal none running lid-keyboard-area; transform: translateZ(-2px); }
-.body .touchpad { width: 40px; height: 31px; position: absolute; left: 50%; top: 50%; border-radius: 4px; margin: -44px 0px 0px -18px; background: linear-gradient(30deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%) rgb(205, 205, 205); box-shadow: rgb(136, 136, 136) 0px 0px 3px inset; }
-.body .keyboard { width: 130px; height: 45px; position: absolute; left: 7px; top: 41px; border-radius: 4px; transform-style: preserve-3d; background: linear-gradient(30deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%) rgb(205, 205, 205); box-shadow: rgb(119, 119, 119) 0px 0px 3px inset; padding: 0px 0px 0px 2px; }
-.keyboard .key { width: 6px; height: 6px; background: rgb(68, 68, 68); float: left; margin: 1px; transform: translateZ(-2px); border-radius: 2px; box-shadow: rgb(34, 34, 34) 0px -2px 0px; animation: 7s ease 0s infinite normal none running keys; }
-.key.space { width: 45px; }
-.key.f { height: 3px; }
-.body .pad { width: 5px; height: 5px; background: rgb(51, 51, 51); border-radius: 100%; position: absolute; }
-.pad.one { left: 20px; top: 20px; }
-.pad.two { right: 20px; top: 20px; }
-.pad.three { right: 20px; bottom: 20px; }
-.pad.four { left: 20px; bottom: 20px; }
-@keyframes rotate { 
-  0% { transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg); }
-  5% { transform: rotateX(-20deg) rotateY(-20deg) rotateZ(0deg); }
-  20% { transform: rotateX(30deg) rotateY(200deg) rotateZ(0deg); }
-  25% { transform: rotateX(-60deg) rotateY(150deg) rotateZ(0deg); }
-  60% { transform: rotateX(-20deg) rotateY(130deg) rotateZ(0deg); }
-  65% { transform: rotateX(-20deg) rotateY(120deg) rotateZ(0deg); }
-  80% { transform: rotateX(-20deg) rotateY(375deg) rotateZ(0deg); }
-  85% { transform: rotateX(-20deg) rotateY(357deg) rotateZ(0deg); }
-  87% { transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg); }
-  100% { transform: rotateX(-20deg) rotateY(360deg) rotateZ(0deg); }
+function bf(){
+ var audio = document.getElementById('music1'); 
+ if(audio!==null){             
+     alert(audio.paused);
+  if(audio.paused)                     {                 
+      audio.play('播放');  
+  }else{
+   audio.pause('暂停');
+  }
+ } 
 }
-@keyframes lid-screen { 
-  0% { transform: rotateX(0deg); background-position: left bottom; }
-  5% { transform: rotateX(50deg); background-position: left bottom; }
-  20% { transform: rotateX(-90deg); background-position: -150px top; }
-  25% { transform: rotateX(15deg); background-position: left bottom; }
-  30% { transform: rotateX(-5deg); background-position: right top; }
-  38% { transform: rotateX(5deg); background-position: right top; }
-  48% { transform: rotateX(0deg); background-position: right top; }
-  90% { transform: rotateX(0deg); background-position: right top; }
-  100% { transform: rotateX(0deg); background-position: right center; }
-}
-@keyframes lid-body { 
-  0% { transform: rotateX(-90deg); }
-  50% { transform: rotateX(-90deg); }
-  100% { transform: rotateX(-90deg); }
-}
-@keyframes lid-keyboard-area { 
-  0% { background-color: rgb(223, 223, 223); }
-  50% { background-color: rgb(187, 187, 187); }
-  100% { background-color: rgb(223, 223, 223); }
-}
-@keyframes screen-shade { 
-  0% { background-position: -20px 0px; }
-  5% { background-position: -40px 0px; }
-  20% { background-position: 200px 0px; }
-  50% { background-position: -200px 0px; }
-  80% { background-position: 0px 0px; }
-  85% { background-position: -30px 0px; }
-  90% { background-position: -20px 0px; }
-  100% { background-position: -20px 0px; }
-}
-@keyframes keys { 
-  0% { box-shadow: rgb(34, 34, 34) 0px -2px 0px; }
-  5% { }
-  20% { box-shadow: rgb(34, 34, 34) -1px 1px 0px; }
-  25% { box-shadow: rgb(34, 34, 34) -1px 1px 0px; }
-  60% { box-shadow: rgb(34, 34, 34) -1px 1px 0px; }
-  80% { box-shadow: rgb(34, 34, 34) 0px -2px 0px; }
-  85% { box-shadow: rgb(34, 34, 34) 0px -2px 0px; }
-  87% { box-shadow: rgb(34, 34, 34) 0px -2px 0px; }
-  100% { box-shadow: rgb(34, 34, 34) 0px -2px 0px; }
-}
-@keyframes shadow { 
-  0% { transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 60px 40px; }
-  5% { transform: rotateX(80deg) rotateY(10deg) rotateZ(0deg); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 60px 40px; }
-  20% { transform: rotateX(30deg) rotateY(-20deg) rotateZ(-20deg); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px 30px; }
-  25% { transform: rotateX(80deg) rotateY(-20deg) rotateZ(50deg); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 35px 15px; }
-  60% { transform: rotateX(80deg) rotateY(0deg) rotateZ(-50deg) translateX(30px); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 60px 40px; }
-  100% { box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 60px 40px; }
-}
-.holder { color: rgb(96, 176, 68); }
-#background { z-index: -1; position: fixed; left: 0px; width: 100%; height: 100%; }
-@media (max-width: 1921px) {
-  .header { padding: 35px 90px 35px 105px; }
-  .warp { padding: 0px 105px; }
-  .content { padding: 0px 105px; height: calc(100vh - 116px); }
-  .warp li {height: 200px;pa;padding: 20px 30px;rgin-top: 30px;}
-  .content .r_content .name { font-size: 138px; }
-  .content .r_content .con1 .ui { font-size: 54px; }
-  .content .r_content .con1 .text { font-size: 18px; }
-  .content .r_content .con1 .works .submit { font-size: 22px; }
-}
-@media (max-width: 1681px) {
-  .header { padding: 30px 70px 25px 90px; }
-  .warp { padding: 0px 90px; }
-  .content { padding: 0px 90px; height: calc(100vh - 106px); }
-  .content .en { font-size: 100px; }
-  .content .r_content .name { font-size: 128px; }
-  .content .r_content .con1 .ui { font-size: 42px; }
-  .content .r_content .con1 .text, .content .r_content .con1 .works .txt { font-size: 16px; }
-  .content .r_content .con1 .works .submit { font-size: 20px; }
-  .content .r_content .tool_content .text { font-size: 18px; }
-  .content .r_content .tool_content .text p { font-size: 16px; }
-}
-@media (max-width: 1441px) {
-  .header { padding: 25px 65px 25px 75px; }
-  .header .user-info .portrait { height: 34px; width: 34px; }
-  .header .user-info .name { font-size: 20px; }
-  .header .link { font-size: 16px; height: 34px; line-height: 34px; }
-  .move-bg { height: 34px; }
-  .warp { padding: 0px 75px; }
-  .content { padding: 0px 75px; height: calc(100vh - 96px); }
-  .warp li { width: calc(23%); margin-top: 20px; }
-  .content .en_box { width: 20%; }
-  .content .r_content { width: 80%; }
-  .content .en { font-size: 90px; }
-  .content .r_content .name { font-size: 118px; }
-  .content .r_content .con1 .ui .tips, .content .r_content .con1 .wx .tips, .content .r_content .name .tips { font-size: 16px; }
-  .content .r_content .con1 .focus { font-size: 16px; }
-  .content .r_content .con1 .works .txt { font-size: 14px; }
-  .content .r_content .con1 .works .submit { font-size: 16px; }
-  .content .r_content .tool_content .text { font-size: 16px; }
-  .content .r_content .tool_content .text p { font-size: 14px; }
-  .content .r_content .name .tips span::after, .content .r_content .name .tips span::before { width: 12vw; }
-  .content .r_content .name .tips span::after { left: -13vw; }
-  .content .r_content .name .tips span::before { right: -13vw; }
-  .content .r_content .vr { width: 17vw; }
-  .content .r_content .con1 .works { width: 16vw; }
-}
-@media (max-width: 1367px) {
-  .header { padding: 20px 40px 20px 70px; }
-  .warp { padding: 0px 70px; }
-  .content { padding: 0px 70px; height: calc(100vh - 86px); }
-  .content .en { font-size: 80px; }
-  .content .r_content .name { font-size: 88px; }
-  .content .r_content .con1 .ui .tips, .content .r_content .con1 .wx .tips, .content .r_content .name .tips { font-size: 14px; }
-  .content .r_content .con1 .focus { font-size: 14px; }
-  .content .r_content .vr { width: 18.5vw; }
-  .content .r_content .con1 .works { width: 16.5vw; }
-}
-@media (max-width: 1281px) {
-  .header { padding: 20px 65px; }
-  .warp { padding: 0px 65px; }
-  .content { padding: 0px 65px; height: calc(100vh - 86px); }
-  .content .r_content .name { font-size: 98px; }
-  .content .r_content .con1 .text { font-size: 14px; }
-  .content .r_content .name .tips span::after, .content .r_content .name .tips span::before { width: 12vw; }
-  .content .r_content .name .tips span::after { left: -12.8vw; }
-  .content .r_content .name .tips span::before { right: -12.8vw; }
-}
+   
+</script>
+<script>
+try {
+	if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+	} else {
+
+			var canvas = document.querySelector('canvas'),
+				ctx = canvas.getContext('2d')
+				canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.lineWidth = .3;
+			ctx.strokeStyle = (new Color(150)).style;
+
+			var mousePosition = {
+				x: 30 * canvas.width / 100,
+				y: 30 * canvas.height / 100
+			};
+
+			var dots = {
+				nb: 250,
+				distance: 100,
+				d_radius: 150,
+				array: []
+			};
+
+			function colorValue(min) {
+				return Math.floor(Math.random() * 255 + min);
+			}
+
+			function createColorStyle(r, g, b) {
+				return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+			}
+
+			function mixComponents(comp1, weight1, comp2, weight2) {
+				return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
+			}
+
+			function averageColorStyles(dot1, dot2) {
+				var color1 = dot1.color,
+					color2 = dot2.color;
+
+				var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
+					g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
+					b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
+				return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
+			}
+
+			function Color(min) {
+				min = min || 0;
+				this.r = colorValue(min);
+				this.g = colorValue(min);
+				this.b = colorValue(min);
+				this.style = createColorStyle(this.r, this.g, this.b);
+			}
+
+			function Dot() {
+				this.x = Math.random() * canvas.width;
+				this.y = Math.random() * canvas.height;
+
+				this.vx = -.5 + Math.random();
+				this.vy = -.5 + Math.random();
+
+				this.radius = Math.random() * 2;
+
+				this.color = new Color();
+				console.log(this);
+			}
+
+			Dot.prototype = {
+				draw: function() {
+					ctx.beginPath();
+					ctx.fillStyle = this.color.style;
+					ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+					ctx.fill();
+				}
+			};
+
+			function createDots() {
+				for (i = 0; i < dots.nb; i++) {
+					dots.array.push(new Dot());
+				}
+			}
+
+			function moveDots() {
+				for (i = 0; i < dots.nb; i++) {
+
+					var dot = dots.array[i];
+
+					if (dot.y < 0 || dot.y > canvas.height) {
+						dot.vx = dot.vx;
+						dot.vy = -dot.vy;
+					} else if (dot.x < 0 || dot.x > canvas.width) {
+						dot.vx = -dot.vx;
+						dot.vy = dot.vy;
+					}
+					dot.x += dot.vx;
+					dot.y += dot.vy;
+				}
+			}
+
+			function connectDots() {
+				for (i = 0; i < dots.nb; i++) {
+					for (j = 0; j < dots.nb; j++) {
+						i_dot = dots.array[i];
+						j_dot = dots.array[j];
+
+						if ((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > -dots.distance && (i_dot.y - j_dot.y) > -dots.distance) {
+							if ((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > -dots.d_radius && (i_dot.y - mousePosition.y) > -dots.d_radius) {
+								ctx.beginPath();
+								ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
+								ctx.moveTo(i_dot.x, i_dot.y);
+								ctx.lineTo(j_dot.x, j_dot.y);
+								ctx.stroke();
+								ctx.closePath();
+							}
+						}
+					}
+				}
+			}
+
+			function drawDots() {
+				for (i = 0; i < dots.nb; i++) {
+					var dot = dots.array[i];
+					dot.draw();
+				}
+			}
+
+			function animateDots() {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				moveDots();
+				//connectDots();
+				drawDots();
+
+				requestAnimationFrame(animateDots);
+			}
+
+
+			createDots();
+			requestAnimationFrame(animateDots);
+
+	}
+} catch (e) {}
+</script>
+<p id="back-to-top" style="display: block;"><a href="#top"><span role="img" aria-label="vertical-align-top" class="anticon anticon-vertical-align-top"><svg viewBox="64 64 896 896" focusable="false" data-icon="vertical-align-top" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M859.9 168H164.1c-4.5 0-8.1 3.6-8.1 8v60c0 4.4 3.6 8 8.1 8h695.8c4.5 0 8.1-3.6 8.1-8v-60c0-4.4-3.6-8-8.1-8zM518.3 355a8 8 0 00-12.6 0l-112 141.7a7.98 7.98 0 006.3 12.9h73.9V848c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V509.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 355z"></path></svg></span>
+</body>
+</html>
+</script>
