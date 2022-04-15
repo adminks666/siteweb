@@ -51,7 +51,7 @@ a:hover { color: rgb(230, 159, 11); }
 .warp { padding: 45px 140px; }
 .warp .txt { margin-top: 45px; font-size: 20px; line-height: 1.5; }
 .warp ul { margin-top: 20px; padding-bottom: 50px; }
-.warp li { position: relative; display: block; overflow: hidden; margin-top: 40px; margin-right: 2%; padding: 30px 40px; width: calc(18%); height: 180px; border-color: rgb(44, 95, 250); border-style: solid; border-width: 1px 1px 3px; border-radius: 10px; border-image: initial; background: rgb(32, 32, 32); transition: all 0.3s ease 0s; }
+.warp li { position: relative; display: block; overflow: hidden; margin-top: 40px; margin-right: 2%; padding: 30px 40px; width: calc(18%); height: 180px; border-color: rgb(44, 95, 250); border-style: solid; border-width: 1px 1px 3px; border-radius: 10px; border-image: initial; background: rgb(32, 32, 32); transition: all 0.3s ease 0s;animation: fadeinup 0.3s;}
 .warp li .icon { width: 248px; height: 152px; }
 .warp li .icon img { position: relative; display: block; width: 248px; height: 152px; border-radius: 32px; transition: all 0.3s ease 0s; }
 .warp li h3 { margin-top: -2px; margin-bottom: -1px; color: rgb(255, 255, 255); font-weight: normal; font-size: 20px; line-height: 1.5; }
