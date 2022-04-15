@@ -346,8 +346,5 @@ p#back-to-top a span{
   -webkit-transition:background1s;
   -o-transition:background1s;
 }
-#back-to-top a:hover span{
-  background:#979797 url(../images/arrow_up.png) no-repeat center center;
-}
 span.desc {padding: 0 20px;
     color: #ffff;}
