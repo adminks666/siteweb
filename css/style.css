@@ -357,3 +357,7 @@ p#back-to-top a span{
 }
 span.desc {padding: 0 20px;
     color: #ffff;}
+.sns.flex {display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 36px;}
