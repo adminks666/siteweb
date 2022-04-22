@@ -112,7 +112,10 @@ a:hover { color: rgb(230, 159, 11); }
 .content .r_content .con1 .focus { padding: 1.6vh 0px 0px 1.5vw; width: 15vw; font-size: 18px; line-height: 1.5; }
 .content .r_content .con1 .focus::after { position: absolute; top: 0px; bottom: -2vh; left: 0px; width: 1px; border-right: 1px dashed rgb(38, 38, 38); content: ""; }
 .content .r_content .con1 .focus .txt { display: none; }
-.content .r_content .con1 .works { padding: 1.6vh 2vw 0px; width: 15vw; }
+.content .r_content .con1 .works { padding: 1.6vh 2vw 0px; width: 15vw; /* display: flex; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    padding: 36px;}
 .content .r_content .con1 .works::after { position: absolute; top: 0px; bottom: -2vh; left: 0px; width: 1px; border-right: 1px dashed rgb(38, 38, 38); content: ""; }
 .content .r_content .con1 .works .txt { text-align: justify; font-size: 18px; line-height: 1.5; }
 .content .r_content .con1 .works a { color: rgb(255, 255, 255); }
@@ -126,7 +129,10 @@ a:hover { color: rgb(230, 159, 11); }
 .error { position: absolute; top: 0px; left: 2.5vw; display: none; color: rgb(255, 75, 75); line-height: 40px; }
 .content .r_content .tool_content { padding: 2vh 2vw; height: 18vh; }
 .content .r_content .tool_content::after { position: absolute; right: 0px; bottom: 0px; left: -1vw; height: 1px; border-bottom: 1px dashed rgb(38, 38, 38); content: ""; }
-.content .r_content .tool_content .text { position: absolute; right: 4vw; bottom: 10px; text-align: right; font-size: 20px; }
+.content .r_content .tool_content .text { position: absolute; right: 4vw; bottom: 10px; text-align: right; font-size: 20px; /* display: flex; */
+    align-content: center;
+    justify-content: center;
+    padding: 36px;}
 .content .r_content .tool_content .text p { margin: 0px; font-size: 18px; }
 .content .r_content .tool_content .sns .wx .erwma { position: absolute; bottom: 24px; left: 50%; width: 64px; height: 64px; opacity: 0; transform: translateX(-50%); }
 .content .r_content .tool_content .sns .wx .erwma img { width: 100%; }
@@ -240,7 +246,10 @@ a:hover { color: rgb(230, 159, 11); }
   .content { padding: 0px 105px; height: calc(100vh - 116px); }
   .warp li { padding: 20px 25px; width: 304.73px; height: 270px; }
   .content .r_content .name { font-size: 138px; }
-  .content .r_content .con1 .ui { font-size: 54px; }
+  .content .r_content .con1 .ui { font-size: 54px; display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 36px;}
   .content .r_content .con1 .text { font-size: 18px; }
   .content .r_content .con1 .works .submit { font-size: 22px; }
 }
