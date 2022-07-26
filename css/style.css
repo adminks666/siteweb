@@ -52,8 +52,8 @@ a:hover { color: rgb(230, 159, 11); }
 .warp .txt { margin-top: 45px; font-size: 20px; line-height: 1.5; }
 .warp ul { margin-top: 20px; padding-bottom: 50px; }
 .warp li { position: relative; display: block; overflow: hidden; margin-top: 40px; margin-right: 2%; padding: 30px 40px; width: calc(18%); height: 180px; border-color: rgb(44, 95, 250); border-style: solid; border-width: 1px 1px 3px; border-radius: 10px; border-image: initial; background: rgb(32, 32, 32); transition: all 0.3s ease 0s; animation: 0.3s ease 0s 1 normal none running fadeinup; }
-.warp li .icon { width: 248px; height: 152px; }
-.warp li .icon img { position: relative; display: block; width: 248px; height: 152px; border-radius: 32px; transition: all 0.3s ease 0s; }
+.warp li .icon { width: 100%; height: 152px; }
+.warp li .icon img {position: relative;display: block;width: 100%;height: 152px;transition: all 0.3s ease 0s;}
 .warp li h3 { margin-top: -2px; margin-bottom: -1px; color: rgb(255, 255, 255); font-weight: normal; font-size: 20px; line-height: 1.5; }
 .warp li h3 a { color: rgb(255, 255, 255); }
 .warp li p { margin: auto; color: rgb(255, 255, 255); font-size: 16px; text-align: center; }
@@ -238,7 +238,7 @@ a:hover { color: rgb(230, 159, 11); }
   .header { padding: 35px 90px 35px 105px; }
   .warp { padding: 0px 105px; }
   .content { padding: 0px 105px; height: calc(100vh - 116px); }
-  .warp li { padding: 20px 25px; width: 304.73px; height: 270px; }
+  .warp li { padding: 0; width: 304.73px; height: 270px; }
   .content .r_content .name { font-size: 138px; }
   .content .r_content .con1 .ui { font-size: 54px; display: flex; place-content: center; padding: 36px; }
   .content .r_content .con1 .text { font-size: 18px; }
@@ -340,3 +340,7 @@ span.desc { padding: 0px 0px 0 20; color: rgb(255, 255, 255); }
     font-size: .6rem;
 }
 
+.site-card-avatar {
+  padding: 0 20px
+  }
+  
