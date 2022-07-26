@@ -13,9 +13,9 @@ a, button, input[type="button"], input[type="submit"], input[type="reset"] { cur
 .w100 { width: 100%; }
 .fl { float: left; }
 .fr { float: right; }
-body { background: rgb(22, 22, 22); color: rgb(255, 255, 255); font: 16px / 30px "Microsoft YaHei", arial, sans-serif; cursor: url("../images/icon_mouse.svg"), auto; }
+body { background: rgb(22, 22, 22); color: rgb(255, 255, 255); font: 16px / 30px "Microsoft YaHei", arial, sans-serif; cursor: url("https://websitecssjs.oss-cn-beijing.aliyuncs.com/links/icon_mouse.svg"), auto; }
 a { color: rgb(0, 0, 0); text-decoration: none; }
-a:hover { color: rgb(230, 159, 11); cursor: url("../images/icon_mouse2.svg"), auto; }
+a:hover { color: rgb(230, 159, 11); cursor: url("https://websitecssjs.oss-cn-beijing.aliyuncs.com/links/icon_mouse2.svg"), auto; }
 a { color: rgb(0, 0, 0); text-decoration: none; }
 a:hover { color: rgb(230, 159, 11); }
 .di_in { display: inline-block; }
@@ -133,7 +133,7 @@ a:hover { color: rgb(230, 159, 11); }
 .content .r_content .tool_content .sns .wx:hover .erwma { bottom: 34px; opacity: 1; }
 .content .r_content .tool_content .sns .figma { margin-left: 2vw; background: url("../images/icon_figma.svg") center center / 100% no-repeat; }
 .content .r_content .tool_content .sns .figma:hover { background: url("../images/icon_figma_hover.svg") center center no-repeat; }
-.content .r_content .con1 .works .lock input { padding-left: 2.5vw; width: 100%; height: 40px; background: url("../images/lock.svg") 0.8vw center / 22px no-repeat rgb(33, 33, 33); color: rgb(255, 255, 255); }
+.content .r_content .con1 .works .lock input { padding-left: 2.5vw; width: 100%; height: 40px; background: url("https://websitecssjs.oss-cn-beijing.aliyuncs.com/links/lock.svg") 0.8vw center / 22px no-repeat rgb(33, 33, 33); color: rgb(255, 255, 255); }
 .content .r_content .tool_content .sns .mail span { width: 100%; height: 24px; }
 .content .r_content .tool_content .sns .mail .copytxt { position: absolute; bottom: 30px; left: 50%; padding: 2px 0px; width: 60px; border-radius: 5px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 14px; opacity: 0; transform: translateX(-50%); }
 .content .r_content .tool_content .sns .mail input { position: absolute; top: 0px; left: 0px; z-index: 0; width: 5px; height: 5px; opacity: 0; }
@@ -311,5 +311,11 @@ p#back-to-top { position: fixed; bottom: 100px; right: 80px; }
 p#back-to-top a { text-align: center; text-decoration: none; color: rgb(209, 209, 209); display: block; width: 30px; transition: color1s 0s ease 0s; }
 p#back-to-top a:hover { color: rgb(151, 151, 151); }
 p#back-to-top a span { border-radius: 6px; display: block; height: 30px; width: 30px; margin-bottom: 5px; transition: background1s 0s ease 0s; }
-span.desc { padding: 0px 20px; color: rgb(255, 255, 255); }
+span.desc { padding: 0px 0px 0 20; color: rgb(255, 255, 255); }
 .sns.flex { display: flex; place-content: center; padding: 36px; }
+.text-h-white {
+    color: #fff!important;
+}
+.text-center {
+    text-align: center!important;
+}
