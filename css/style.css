@@ -238,7 +238,7 @@ a:hover { color: rgb(230, 159, 11); }
   .header { padding: 35px 90px 35px 105px; }
   .warp { padding: 0px 105px; }
   .content { padding: 0px 105px; height: calc(100vh - 116px); }
-  .warp li { padding: 0; width: 304.73px; height: 270px; }
+  .warp li {padding: 0;/* width: 304.73px; */height: 270px;}
   .content .r_content .name { font-size: 138px; }
   .content .r_content .con1 .ui { font-size: 54px; display: flex; place-content: center; padding: 36px; }
   .content .r_content .con1 .text { font-size: 18px; }
@@ -264,7 +264,7 @@ a:hover { color: rgb(230, 159, 11); }
   .move-bg { height: 34px; }
   .warp { padding: 0px 75px; }
   .content { padding: 0px 75px; height: calc(100vh - 96px); }
-  .warp li { margin-top: 20px; width: calc(23%); }
+  .warp li {margin-top: 20px;width: calc(31%);height: 320px;}
   .content .en_box { width: 20%; }
   .content .r_content { width: 80%; }
   .content .en { font-size: 90px; }
