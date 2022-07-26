@@ -319,3 +319,24 @@ span.desc { padding: 0px 0px 0 20; color: rgb(255, 255, 255); }
 .text-center {
     text-align: center!important;
 }
+.site-card-tag.vip {
+    background: -webkit-linear-gradient(38deg,#e5b085 0,#d48f16 100%);
+    background: linear-gradient(38deg,#000000 0,#2c5ef7 100%);
+    overflow: hidden;
+    box-shadow: var(--heo-shadow-yellow);
+}
+
+.site-card-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 8px;
+    background-color: var(--heo-main);
+    box-shadow: var(--heo-shadow-main);
+    color: var(--heo-white);
+    z-index: 1;
+    border-radius: 0 0 12px 0;
+    transition: .3s;
+    font-size: .6rem;
+}
+
