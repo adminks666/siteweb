@@ -56,7 +56,7 @@ a:hover { color: rgb(230, 159, 11); }
 .warp li .icon img {position: relative;display: block;width: 100%;height: 152px;transition: all 0.3s ease 0s;}
 .warp li h3 { margin-top: -2px; margin-bottom: -1px; color: rgb(255, 255, 255); font-weight: normal; font-size: 20px; line-height: 1.5; }
 .warp li h3 a { color: rgb(255, 255, 255); }
-.warp li p { margin: auto; color: rgb(255, 255, 255); font-size: 16px; text-align: center; }
+.warp li p {/* margin: auto; */color: rgb(255, 255, 255);font-size: 16px;text-align: center;}
 .warp li:hover { margin-top: 10px; }
 .c1 { color: rgb(48, 199, 140); }
 .c2 { color: rgb(237, 137, 73); }
