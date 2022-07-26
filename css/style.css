@@ -282,7 +282,7 @@ a:hover { color: rgb(230, 159, 11); }
   .content .r_content .con1 .works { width: 16vw; }
 }
 @media (max-width: 1367px) {
-  .warp li {margin-top: 20px;width: calc(31%);}  
+  .warp li {margin-top: 20px;width: calc(31%);height: 270px;}  
   .header { padding: 20px 40px 20px 70px; }
   .warp { padding: 0px 70px; }
   .content { padding: 0px 70px; height: calc(100vh - 86px); }
