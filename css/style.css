@@ -344,3 +344,16 @@ span.desc { padding: 0px 0px 0 20; color: rgb(255, 255, 255); }
   padding: 0 20px
   }
   
+site-card-avatar-img {
+    border-radius: 50%;
+}
+
+flink-avatar cf-friends-avatar entered loaded {
+    border-radius: 50%;
+}
+
+site-card-avatar- {}
+
+img.flink-avatar.cf-friends-avatar.entered.loaded {
+    border-radius: 50%;
+}
