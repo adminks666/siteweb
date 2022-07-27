@@ -238,13 +238,14 @@ a:hover { color: rgb(230, 159, 11); }
   .header { padding: 35px 90px 35px 105px; }
   .warp { padding: 0px 105px; }
   .content { padding: 0px 105px; height: calc(100vh - 116px); }
-  .warp li {padding: 0;/* width: 304.73px; */height: 270px;}
+  .warp li {padding: 0;/* width: 304.73px; */height: 270px;box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);}
   .content .r_content .name { font-size: 138px; }
   .content .r_content .con1 .ui { font-size: 54px; display: flex; place-content: center; padding: 36px; }
   .content .r_content .con1 .text { font-size: 18px; }
   .content .r_content .con1 .works .submit { font-size: 22px; }
 }
 @media (max-width: 1681px) {
+  .warp li {padding: 0;/* width: 304.73px; */height: 270px;box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);}  
   .header { padding: 30px 70px 25px 90px; }
   .warp { padding: 0px 90px; }
   .content { padding: 0px 90px; height: calc(100vh - 106px); }
@@ -264,7 +265,7 @@ a:hover { color: rgb(230, 159, 11); }
   .move-bg { height: 34px; }
   .warp { padding: 0px 75px; }
   .content { padding: 0px 75px; height: calc(100vh - 96px); }
-  .warp li {margin-top: 20px;width: calc(31%);height: 320px;}
+  .warp li {margin-top: 20px;width: calc(31%);height: 320px;box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);}
   .content .en_box { width: 20%; }
   .content .r_content { width: 80%; }
   .content .en { font-size: 90px; }
@@ -282,7 +283,7 @@ a:hover { color: rgb(230, 159, 11); }
   .content .r_content .con1 .works { width: 16vw; }
 }
 @media (max-width: 1367px) {
-  .warp li {margin-top: 20px;width: calc(31%);height: 270px;}  
+  .warp li {margin-top: 20px;width: calc(31%);height: 270px;box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);}  
   .header { padding: 20px 40px 20px 70px; }
   .warp { padding: 0px 70px; }
   .content { padding: 0px 70px; height: calc(100vh - 86px); }
@@ -294,7 +295,7 @@ a:hover { color: rgb(230, 159, 11); }
   .content .r_content .con1 .works { width: 16.5vw; }
 }
 @media (max-width: 1281px) {
-  .warp li {margin-top: 20px;width: calc(31%);}   
+  .warp li {margin-top: 20px;width: calc(31%);box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);}   
   .header { padding: 20px 65px; }
   .warp { padding: 0px 65px; }
   .content { padding: 0px 65px; height: calc(100vh - 86px); }
@@ -326,6 +327,7 @@ span.desc { padding: 0px 0px 0 20; color: rgb(255, 255, 255); }
     background: linear-gradient(38deg,#000000 0,#2c5ef7 100%);
     overflow: hidden;
     box-shadow: var(--heo-shadow-yellow);
+    box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);
 }
 
 .site-card-tag {
