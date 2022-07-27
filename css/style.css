@@ -385,3 +385,23 @@ img.flink-avatar.cf-friends-avatar.entered.loaded {
     border-radius: 10px;
     box-shadow: 0 0 0 8px rgb(255 255 255 / 20%);
 }
+.contact-me {
+    border: 0;
+    outline: none;
+    background: rgb(31 66 173);
+    background: linear-gradient(to right, rgb(0 0 0) 0%, rgb(0 0 0) 96%);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 15%);
+    color: #fff;
+    padding: 4px 60px;
+    /* height: 140px; */
+    border-radius: 5px;
+    margin-top: 11px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    /* border-radius: 50%; */
+    border-radius: 15px;
+}
