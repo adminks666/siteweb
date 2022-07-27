@@ -405,3 +405,8 @@ img.flink-avatar.cf-friends-avatar.entered.loaded {
     /* border-radius: 50%; */
     border-radius: 15px;
 }
+.site-card-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
