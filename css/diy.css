@@ -15708,11 +15708,16 @@ to {
 	height:100%
 }
 .antd-pro-pages-home-components-assistance-section-content-card-ContentCard {
-	position:relative;
+	position:
+	relative;
 	-webkit-transition:-webkit-transform .3s ease-out;
-	transition:-webkit-transform .3s ease-out;
-	transition:transform .3s ease-out;
-	transition:transform .3s ease-out,-webkit-transform .3s ease-out
+	transition:
+	-webkit-transform .3s ease-out;
+	transition:
+	transform .3s ease-out;
+	transition:
+	transform .3s ease-out,-webkit-transform .3s ease-out;
+	box-shadow: 0 0 0 8px rgb(50 54 60 / 85%);
 }
 .antd-pro-pages-home-components-assistance-section-content-card-ContentCard:hover {
 	-webkit-transform:translateY(-12px);
