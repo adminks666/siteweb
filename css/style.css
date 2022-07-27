@@ -361,3 +361,27 @@ site-card-avatar- {}
 img.flink-avatar.cf-friends-avatar.entered.loaded {
     border-radius: 50%;
 }
+.swal-overlay--show-modal .swal-modal {
+    opacity: 1;
+    pointer-events: auto;
+    box-sizing: border-box;
+    -webkit-animation: showSweetAlert .3s;
+    animation: showSweetAlert .3s;
+    will-change: transform;
+    /* max-width: 340px; */
+    margin: auto;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: #bfbfbf;
+    /* display: -webkit-box; */
+    /* display: flex; */
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 0 8px rgb(255 255 255 / 20%);
+}
