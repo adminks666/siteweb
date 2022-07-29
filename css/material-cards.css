@@ -278,7 +278,7 @@
     top: -32px;
 }
 .material-card.Red h2 {
-    background-color: #f44336;
+    background-color: #000000;
 }
 .material-card.Red h2:after {
     border-top-color: #f44336;
