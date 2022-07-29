@@ -1419,7 +1419,85 @@
 											</div>
 											收录个人博客精选安全类型的文章
 										</div>
-										待添加！
+<link rel="stylesheet" href="css/bootstrap.css" tppabs="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css" tppabs="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
+<link rel="stylesheet" href="css/material-cards.css" tppabs="https://www.jq22.com/demo/jquerytwqh201907070036/css/material-cards.css">
+<style type="text/css">
+</style>
+
+</head>
+<body>
+<div class="htmleaf-container">
+<br>
+	<section class="container">
+
+		<div class="row active-with-click">
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<article class="material-card Red">
+					<h2>
+						<span>Christopher Walken</span>
+						<strong>
+							<i class="fa fa-fw fa-star"></i>
+							The Deer Hunter
+						</strong>
+					</h2>
+					<div class="mc-content">
+						<div class="img-container">
+							<img class="img-responsive" src="img/thumb-christopher-walken.jpg" tppabs="https://www.jq22.com/demo/jquerytwqh201907070036/img/thumb-christopher-walken.jpg">
+						</div>
+						<div class="mc-description">
+							He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+						</div>
+					</div>
+					<a class="mc-btn-action">
+						<i class="fa fa-bars"></i>
+					</a>
+					<div class="mc-footer">
+						<h4>
+							查看详情
+						</h4>
+						<a class="fa fa-fw fa-facebook"></a>
+						<a class="fa fa-fw fa-twitter"></a>
+						<a class="fa fa-fw fa-linkedin"></a>
+						<a class="fa fa-fw fa-google-plus"></a>
+					</div>
+				</article>
+			</div>
+
+
+
+
+		</div>
+	</section>
+</div>
+
+<script src="js/jquery.min.js" tppabs="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/jquery.material-cards.min.js" tppabs="https://www.jq22.com/demo/jquerytwqh201907070036/js/jquery.material-cards.min.js"></script>
+<script>
+	$(function() {
+		$('.material-card').materialCard({
+			icon_close: 'fa-chevron-left',
+			icon_open: 'fa-thumbs-o-up',
+			icon_spin: 'fa-spin-fast',
+			card_activator: 'click'
+		});
+
+//        $('.active-with-click .material-card').materialCard();
+
+		window.setTimeout(function() {
+			$('.material-card:eq(1)').materialCard('open');
+		}, 2000);
+
+		$('.material-card').on('shown.material-card show.material-card hide.material-card hidden.material-card', function (event) {
+			console.log(event.type, event.namespace, $(this));
+		});
+
+	});
+</script>
+
+
+</body>
+</html>
 									</div>
 								</div>
 							</main>
