@@ -1,10 +1,10 @@
 @font-face {
   font-family: "PangMenZhengDao";
-  src: url("/fonts/PangMenZhengDao.woff2") format("woff2"),
-       url("/fonts/PangMenZhengDao.woff") format("woff"),
-       url("/fonts/PangMenZhengDao.ttf") format("truetype"),
-       url("/fonts/PangMenZhengDao.eot") format("embedded-opentype"),
-       url("/fonts/PangMenZhengDao.svg") format("svg");
+  src: url("font/PangMenZhengDao.woff2") format("woff2"),
+       url("font/PangMenZhengDao.woff") format("woff"),
+       url("font/PangMenZhengDao.ttf") format("truetype"),
+       url("font/PangMenZhengDao.eot") format("embedded-opentype"),
+       url("font/PangMenZhengDao.svg") format("svg");
 
 }
 .PangMenZhengDao{font-family: PangMenZhengDao;}
