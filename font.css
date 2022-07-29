@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "PangMenZhengDao";
+  src: url("font/PangMenZhengDao.woff2") format("woff2"),
+       url("font/PangMenZhengDao.woff") format("woff"),
+       url("font/PangMenZhengDao.ttf") format("truetype"),
+       url("font/PangMenZhengDao.eot") format("embedded-opentype"),
+       url("font/PangMenZhengDao.svg") format("svg");
+
+}
+.PangMenZhengDao{font-family: PangMenZhengDao;}
+.OPPOSans-B{font-family: OPPOSans-B;}
+.OPPOSans-M{font-family: OPPOSans-M;}
+.OPPOSans-R{font-family: OPPOSans-R;}
