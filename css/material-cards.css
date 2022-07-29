@@ -320,7 +320,8 @@
     background-color: rgb(50 54 60 / 85%);
 }
 .material-card.Red.mc-active .mc-footer {
-    background-color: #ffcdd2;
+    background-color: #000000;
+    padding: 15 0 0 74;
 }
 .material-card.Red.mc-active .mc-btn-action {
     border-color: #ffebee;
