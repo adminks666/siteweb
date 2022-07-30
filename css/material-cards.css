@@ -269,7 +269,7 @@
     right: 0;
     height: 82px;
     padding-top: 15px;
-    padding-left: 25px;
+    /* padding-left: 25px; */
 }
 .material-card.mc-active .mc-footer a {
     top: 0;
@@ -321,7 +321,10 @@
 }
 .material-card.Red.mc-active .mc-footer {
     background-color: #000000;
-    padding: 15 0 0 74;
+    /* padding: 15px 0 0 74px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .material-card.Red.mc-active .mc-btn-action {
     border-color: #ffebee;
