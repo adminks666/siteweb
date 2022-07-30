@@ -15654,12 +15654,19 @@ to {
 	*/position:relative
 }
 .antd-pro-pages-home-components-assistance-section-index-AssistanceSection .antd-pro-pages-home-components-assistance-section-index-assistanceWrapper {
-	display:-webkit-flex;
-	display:flex;
+	display:
+	-webkit-flex;
+	display:
+	flex;
 	-webkit-align-items:center;
-	align-items:center;
+	align-items:
+	center;
 	-webkit-justify-content:center;
-	justify-content:center
+	justify-content:
+	center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .antd-pro-pages-home-components-assistance-section-index-AssistanceSection .antd-pro-pages-home-components-assistance-section-index-assistanceWrapper .antd-pro-pages-home-components-assistance-section-index-contentWrapper {
 	max-width:1400px;
