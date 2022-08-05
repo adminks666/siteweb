@@ -162,33 +162,43 @@
 		</style>
 		<script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
 
-		<script>
-			swal('本站状态:稳定运行中','\n\n本站不支持手机访问电脑版主页，如需访问手机版请访问m.siteweb.cn','success'); function AddFavorite(title, url) {
-						
-						  try {
-						
-						      window.external.addFavorite(url, title);
-						
-						  }
-						
-						catch (e) {
-						
-						     try {
-						
-						       window.sidebar.addPanel(title, url,);
-						
-						    }
-						
-						     catch (e) {
-						
-						         alert("抱歉，您所使用的浏览器无法完成此操作。");
-						
-						     }
-						
-						  }
-						
-						}
-		</script>
+<div class="swal-modal" role="dialog" aria-modal="true"><div class="swal-modal" role="dialog" aria-modal="true"><div class="hw-text-tip" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    /* height: 100%; */
+"><div class="hw-text-tip-content" style="
+    display: flex;
+    align-items: start;
+"><img src="https://x.threatbook.com/public/public/img/5185681b.text.png?1659658506983" class="hw-text" style="
+    width: 210px;
+    height: 446px;
+    margin-right: 50px;
+    -webkit-animation: showHwText 2s linear 38s;
+    animation: showHwText 2s linear 38s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    /* visibility: hidden; */
+"><img src="https://x.threatbook.com/public/public/img/7b8722a0.tip.png" class="hw-tip" style="
+    width: 140px;
+    height: auto;
+    -webkit-animation: showHwTip 2s linear 37s;
+    animation: showHwTip 2s linear 37s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    /* opacity: 0; */
+"></div></div></div><div class="swal-footer"><div class="swal-button-container">
+
+    <button class="swal-button swal-button--confirm">OK</button>
+
+    <div class="swal-button__loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div></div></div>
 		<script type="text/javascript">
 			function divhidden(){
 						document.getElementById("show").style.display="none";    
