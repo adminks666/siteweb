@@ -124,6 +124,8 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.1s linear;
+  width: 50px;
+  height: 40px;  
 }
 @media (max-width:568px) {
   .lb-ctrl {
