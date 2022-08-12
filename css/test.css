@@ -31699,8 +31699,8 @@ div.ant-typography-edit-content.ant-typography-rtl {
 }
 
 svg {
-    width: 100%;
-    visibility: hidden
+    /* width: 100%; */
+    /* visibility: hidden; */
 }
 
 .empty-image-container {
