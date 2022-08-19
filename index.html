@@ -1980,7 +1980,33 @@
 				<li style="
     width: 1044px;
     height: 212px;
-"><p><button class="contact-me">动态网站友链信息</button></p><p>名称：御网尚书的小宇宙</p><p>图标：https://www.hack-gov.com.cn/img/friend_404.gif</p><p>链接：https://www.siteweb.cn/</p><p>简介：：愿以赤子之心，共建网络空间安全</p><p></p></li>
+"><p><button class="contact-me">动态网站友链信息</button></p><p>名称：御网尚书的小宇宙</p><p>图标：https://www.hack-gov.com.cn/img/friend_404.gif</p><p>链接：https://www.siteweb.cn/</p><p>简介：：愿以赤子之心，共建网络空间安全</p>  <body>
+    <!-- 1. Define some markup -->
+    <button data-clipboard-text="1">Copy</button>
+    <button data-clipboard-text="2">Copy</button>
+    <button data-clipboard-text="3">Copy</button>
+
+    <!-- 2. Include library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard by passing a list of HTML elements -->
+    <script>
+      var btns = document.querySelectorAll('button');
+      var clipboard = new ClipboardJS(btns);
+
+      clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
+  </body></li>
 
 	</div>
 </div>
