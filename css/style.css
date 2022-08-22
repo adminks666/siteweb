@@ -829,7 +829,7 @@ a:hover {
     position: absolute;
     right: 4vw;
     bottom: 10px;
-    text-align: right;
+    text-align: center;
     font-size: 20px;
     place-content: center;
     /* padding: 36px; */
