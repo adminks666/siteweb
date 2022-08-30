@@ -11,36 +11,12 @@
     Object.keys(currentObj).map(function (key) {
         $('.icpcode').html(currentObj[key])
     })
-var div = document.querySelector('icpcode')
 
-        btn.addEventListener('click', function () {
 
-            // location.href = 'http://www.baidu.com';
+var obj = document.getElementById('icpcode');
 
-            var timer = 5;
+obj.οnclick=function(){
 
-            setInterval(function () {
+window.location.href="www.gov.cn" rel="external nofollow" ;
 
-                if (timer == 0) {
-
-                    location.href = 'http://www.php.cn';
-
-                } else {
-
-                    div.innerHTML = '你还有' + timer + '秒就可以跳转了';
-
-                    timer--
-
-                }
-
-            },1000)
-
-            /*  setInterval(function(){
-
-                 div.innerHTML = '你还有' + timer + '秒就可以跳转了'
-
-                 timer--;
-
-             },1000) */
-
-        });
+}
