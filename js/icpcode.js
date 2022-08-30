@@ -2,9 +2,15 @@
         'www.siteweb.cn': {
             'icpcode': '豫ICP备2022019867号-1',
         },
+        'siteweb.cn': {
+            'icpcode': '豫ICP备2022019867号-1',
+        },    
         'www.ipv1.cn': {
             'icpcode': '萌ICP备2022019867号',
         }
+        'ipv1.cn': {
+            'icpcode': '萌ICP备2022019867号',
+        }    
     }
     var host = location.host;
     var currentObj = wordObj[host]  //获取到当前域名下的内容
