@@ -13,10 +13,7 @@
     })
 
 
-var obj = document.getElementById('icpcode');
+$('.icpcode').click(function(){
 
-obj.onclick=function(onclick){ 
-
-  let win = window.open('https://www.baidu.com', 'baidu');
-
- }
+window.open('www.baidu.com','_blank')
+})
