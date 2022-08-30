@@ -15,5 +15,5 @@
 
 $('.icpcode').click(function(){
 
-window.open('www.baidu.com','_blank')
+window.open('https://beian.miit.gov.cn/#/Integrated/index','_blank')
 })
