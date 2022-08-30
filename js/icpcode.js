@@ -15,8 +15,8 @@
 
 var obj = document.getElementById('icpcode');
 
-obj.οnclick=function(){
+obj.onclick=function(){ 
 
-window.location.href="www.gov.cn";
+  let win = window.open('https://www.baidu.com', 'baidu');
 
-}
+ }
