@@ -17,6 +17,6 @@ var obj = document.getElementById('icpcode');
 
 obj.οnclick=function(){
 
-window.location.href="www.gov.cn" rel="external nofollow" ;
+window.location.href="www.gov.cn";
 
 }
