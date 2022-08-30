@@ -9,5 +9,5 @@
     var host = location.host;
     var currentObj = wordObj[host]  //获取到当前域名下的内容
     Object.keys(currentObj).map(function (key) {
-        $('.icpcode').html(currentObj.key)
+        $('.icpcode').html(currentObj[key])
     })
