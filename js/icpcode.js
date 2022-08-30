@@ -14,9 +14,6 @@
 
 
 var obj = document.getElementById('icpcode');
-
-obj.onclick=function(){ 
-
-  let win = window.open('https://www.baidu.com', 'baidu');
-
- }
+function open_win() {
+    window.open("https://www.runoob.com");
+}
